@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "windowtally",
+  "displayName": "WindowTally",
+  "version": "1.0.0",
+  "description": "WindowTally in every Claude Code session: hands the ledger service each session's plan readings, shows every account's standing above the prompt, and warns as the in-use account's limits fill.",
+  "author": { "name": "offcutworks" },
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

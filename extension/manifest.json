@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "WindowTally",
+  "version": "1.0.0",
+  "description": "Hands WindowTally the 5-hour and weekly figures, and the week's use by product, that claude.ai's page receives. Sends no request.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5MSEiJJveklwlkfFYP4J80J0FT/nm3A9QnZeITVIFXhB2Plk6V7/59hnPVBvVDrAkH5/AUYyHI5XvnrqAsvc1jMB3agAUfKZ2VnR0OfKOeAj49jEpNAlSSb6e0+4dj/P3vobMEASRB02ILY4cFCLnFkhRhyv2e6GNbbj0+XkU1A9l7sd1ekn0u62wNGLPMrnLIZHJOVjiX8isxWCa5Sw26RlN3j7iUzKp5uB3uSdCrz0ktLMXXbWyuZGsOCgGu3WON+x7bEq7a3jd+sNjrxqkXy3fAwoV2zO+3QMXxuDX3c812tePbwj4X9oQn8d3yOL30LAB2nC+ZUpjXY14J58BwIDAQAB",
+  "permissions": ["nativeMessaging"],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [
+    {"matches": ["https://claude.ai/*"], "js": ["page.js"], "world": "MAIN", "run_at": "document_start"},
+    {"matches": ["https://claude.ai/*"], "js": ["relay.js"], "run_at": "document_start"}
+  ]
+}

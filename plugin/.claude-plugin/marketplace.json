@@ -1,0 +1,14 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "windowtally-local",
+  "owner": { "name": "offcutworks" },
+  "description": "WindowTally's own marketplace, read from the copy install.ps1 keeps beside WindowTally's data. It carries one plugin: WindowTally's desktop plugin.",
+  "plugins": [
+    {
+      "name": "windowtally",
+      "source": "./",
+      "displayName": "WindowTally",
+      "description": "Writes each Claude Code session's plan readings for WindowTally's ledger service, draws every account's standing above the prompt, and warns as the in-use account's limits fill."
+    }
+  ]
+}

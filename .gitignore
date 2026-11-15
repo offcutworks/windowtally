@@ -1,0 +1,14 @@
+# This file is complete on its own: the tool is published as a repository of its own,
+# where no enclosing .gitignore exists. WindowTally keeps its data, its installed copy and
+# its logs under the user's profile, never in this folder.
+
+# Python bytecode, written beside the sources when the tests or the tool run from here.
+__pycache__/
+*.py[cod]
+
+# What a release is built from — the interpreter, Tk and Qt that tools/fetch_build_inputs.py
+# obtains and checks against their pinned checksums — and what tools/build_release.py
+# writes: each release's zip, SHA256SUMS and suite transcript. Made per machine, never
+# committed.
+/build-inputs/
+/dist/
